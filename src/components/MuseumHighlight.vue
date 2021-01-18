@@ -47,8 +47,6 @@ export default {
   components: {
     NewsOverlay,
   },
-  mixins: [
-  ],
   props: {
     highlight: {
       type: Object,
@@ -65,23 +63,11 @@ export default {
       // eslint-disable-next-line no-prototype-builtins
       return this.highlight.hasOwnProperty('news');
     },
-    // newsDate() {
-    //   // Highlight's news item date
-    // },
-  },
-  methods: {
-
-  },
-  created() {
-
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.museum-highlight {
-
-}
 .card {
   position: relative;
   margin-bottom: 1rem;

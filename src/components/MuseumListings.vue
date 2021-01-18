@@ -16,7 +16,6 @@
 
 <script>
 
-// import MuseumHighlight from './MuseumHighlight';
 import MuseumHighlight from '@/components/MuseumHighlight.vue';
 
 export default {
@@ -78,12 +77,14 @@ export default {
   computed: {
     combine() {
       const combined = [];
+      // add museum data
       this.spaceHighlights.forEach((el) => {
         const currEl = el;
         // set third party boolean
         currEl.isThirdParty = false;
         combined.push(currEl);
       });
+      // add api data
       Object.keys(this.spacePartners).forEach((key) => {
         const currObj = this.spacePartners[key];
         // set third party boolean
@@ -100,19 +101,10 @@ export default {
       return combine.sort((a, b) => new Date(a.date) - new Date(b.date));
     },
   },
-  methods: {
-
-  },
-  created() {
-
-  },
 };
 </script>
 
 <style lang="scss" scoped>
-.museum-listings {
-
-}
 .header {
   padding: 20px;
 }
