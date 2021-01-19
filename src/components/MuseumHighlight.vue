@@ -97,4 +97,16 @@ export default {
 .card--mus-data {
   background-color: #785f8ea6 !important;
 }
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .card {
+    width: 80%;
+  }
+}
 </style>
